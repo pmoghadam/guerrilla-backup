@@ -9,10 +9,9 @@ mkdir -p /srv/backups /srv/delete
 cd guerrilla-backup
 ln -sfn /srv/backups backups
 ln -sfn /srv/delete delete
+touch hosts/alice.tritone.ir
 ```
 
-* Copy project to /opt/guerrilla-backup/
-* Create symlinks for /opt/guerrilla-backup/backups and /opt/guerrilla-backup/delete (both should be in the same partition)
-* Create host files in hosts dir (example: docs/hosts.example)
+* Create/Edit host files in hosts dir (example: docs/hosts.example)
 * Read all files in scripts dir and make changes if needed
 * Change /etc/crontab (example: docs/crontab.example)
