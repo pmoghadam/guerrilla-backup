@@ -1,0 +1,13 @@
+#!/bin/bash
+# Filename: /root/scripts/sqlbackup.sh
+# crontab: 00 2    * * *   root    /root/scripts/sqlbackup.sh &> /dev/null
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+TODAY=$(date +%F)
+BACKUPDIR="/srv/backup-db"
+
+mkdir -p ${BACKUPDIR}
+
+mysqldump --events --ignore-table=mysql.event --all-databases --single-transaction |
+        gzip -3 -c > $BACKUPDIR/database-all.$TODAY.sql.gz
+
+find ${BACKUPDIR} -type f -mtime +30 -name "*.sql.gz" -exec rm {} \;

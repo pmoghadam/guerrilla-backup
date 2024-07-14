@@ -1,0 +1,14 @@
+
+IP="172.18.180.41"
+
+ADDITIONAL_DIRS="
+        /opt/
+        /srv/backupapplication/
+        /opt/production_axtract_3/data/rrddb-data/
+
+"
+ADDITIONAL_EXCLUDES="
+        proc
+        dev
+"
+
