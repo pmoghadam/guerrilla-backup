@@ -2,7 +2,7 @@
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 LIST=$(mktemp)
 CWD=$(dirname $(readlink -f $0))
-CONF="$CWD/../guerrilla.conf"
+CONF="$CWD/../conf/guerrilla.conf"
 LOG="$CWD/../logs/backup-$(date +%Y%m%d-%H%M%S).log"
 HOSTSDIR="$CWD/../hosts"
 TIMEOUT=60

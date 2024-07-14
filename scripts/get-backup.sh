@@ -32,7 +32,7 @@ if [ "$IP" == "" ]; then
 fi
 
 # Read global host defaults
-. "$PARENTDIR/defaults.conf"
+. "$PARENTDIR/conf/defaults.conf"
 
 # Read custom host config
 . "$PARENTDIR/hosts/$HNAME"

@@ -1,7 +1,7 @@
 #!/bin/bash
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 CWD=$(dirname $(readlink -f $0))
-CONF="$CWD/../guerrilla.conf"
+CONF="$CWD/../conf/guerrilla.conf"
 LOGDIR="$CWD/../logs"
 LOG="$LOGDIR/move-$(date +%Y%m%d-%H%M%S).log"
 TMP=$(mktemp)
