@@ -1,0 +1,13 @@
+
+# Start Backup Procedure
+00 03	* * *	root	/opt/guerrilla-backup/scripts/backup-launcher.sh &> /dev/null
+
+# Start Cleanup Procedure
+01 15	* * *	root	/opt/guerrilla-backup/scripts/move-old-backups.sh &> /dev/null
+
+# Delete old backups
+*/5 *	* * *	root	/opt/guerrilla-backup/scripts/delete-old-backups.sh &> /dev/null
+
+# Remove stalled backups
+00 02	* * *	root	/opt/guerrilla-backup/scripts/remove-stalled-backups.sh &> /dev/null
+
