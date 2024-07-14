@@ -15,3 +15,5 @@ touch hosts/alice.tritone.ir
 * Create/Edit host files in hosts dir (example: docs/hosts.example)
 * Read all files in scripts dir and make changes if needed
 * Change /etc/crontab (example: docs/crontab.example)
+
+
